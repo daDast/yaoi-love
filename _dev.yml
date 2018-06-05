@@ -1,0 +1,23 @@
+title: Как создать сайт?
+email: your-email@example.com
+description: Основы самостоятельной разработки сайтов.
+baseurl: "/dev"
+url: "http://localhost:4000"
+
+
+encoding: utf-8
+highlighter: rouge
+
+
+paginate: 7
+
+permalink: /:categories/:title.html
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+collections:
+  collect:
+    output: true
+    permalink: /collect/:path/
