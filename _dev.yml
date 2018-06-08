@@ -1,9 +1,9 @@
-title: Как создать сайт?
+title: Слово
 email: your-email@example.com
 description: Основы самостоятельной разработки сайтов.
 baseurl: "/dev"
 url: "http://localhost:4000"
-
+# jekyll s --livereload --config _dev.yml
 
 encoding: utf-8
 highlighter: rouge

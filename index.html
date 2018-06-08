@@ -1,5 +1,21 @@
 ---
 layout: home
+title: "Сасуке"
+breadcrumb:
+  - id: collecton
+    name: "Коллекция"
+    dir: "/collection/xiaomi/"
+  - id: category
+    name: "Категория"
+    dir: "/collection/xiaomi/"
 pagination:
   enabled: true
 ---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <h1><a href="{{ post.url  | prepend: site.baseurl | prepend: site.url}}">{{ post.title }}</a></h1>
+
+{% endfor %}
+
+<!-- Pagination links -->

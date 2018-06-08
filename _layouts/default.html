@@ -3,16 +3,29 @@
 {% include head.html %}
 <body>
 {% include header.html %}
-<div class="content--wrap">
-<main>
-{{ content }}
-</main>
-<aside class="menu1">
 
+<aside class="menu1">
+  <div>
+    <h4 class="menu1__title"> <span>Галерея</span> </h4>
+    {% include menu1.html %}
+  </div>
 </aside>
+<main>
+  {% if page.title %}
+    <h1 class="page__title">{{ page.title }}</h1>
+  {% endif %}
+  {% include breadcrumb.html %}
+
+{{ content }}
+</main >
 <aside class="menu2">
-  
+  <div>
+    <h4> <span>Недавние записи</span> </h4>
+    {% include menu2.html %}
+  </div>
 </aside>
+<div class="pagination__post">
+{% include paginations.html %}
 </div>
 {% include footer.html %}
 </body>

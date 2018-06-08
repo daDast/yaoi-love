@@ -8,34 +8,37 @@ $font5: "Lucida Sans Unicode", Lucida Grande, sans-serif;
 $font6: "Tahoma", Geneva, sans-serif;
 $font7: "Trebuchet MS", Helvetica, sans-serif;
 $font8: "Verdana", Geneva, sans-serif;
-$font9: "Open Sans",sans-serif;
-// С зачечками
+$font9: "Open Sans",sans-serif; // С зачечками
 $font10: "Georgia", serif;
 $font11: "Palatino Linotype", Book Antiqua, Palatino, serif;
-$font12: "Times New Roman", Times, serif;
-// Непропорциональный шрифт
+$font12: "Times New Roman", Times, serif; // Непропорциональный шрифт
 $font13: "Courier New", Courier, monospace;
 $font14: "Lucida Console", Monaco, monospace;
-html{
- font-size: 19px
+
+html {
+  font-size: 16px;
 }
-p{
-font-family: $font9;
-font-size: 1rem;
-line-height: 2.9rem;
-font-weight: 400;
-color: #575757;
-margin-bottom: 15px;
+
+p {
+  font-family: $font9;
+  font-size: 1rem;
+  line-height: 2.9rem;
+  font-weight: 400;
+  color: #575757;
+  margin-bottom: 15px;
 }
-h1{
-  font-size: 3.8rem;
-line-height: 4.2rem;
-font-weight: 400;
-font-family: $font9;
-color: #1e1e1e;
-margin-bottom: 25px;
+
+h1 {
+  line-height: 2rem;
+  font-size: 1.4rem;
+  margin: 0.3rem 0;
+  font-weight: 400;
+  font-family: $font9;
+  text-transform: uppercase;
+  color: #1e1e1e;
 }
-h2{
+
+h2 {
   font-family: $font9;
   font-size: 2.4rem;
   line-height: 2.9rem;
@@ -44,6 +47,18 @@ h2{
   text-align: left!important;
   margin: 30px 0 20px;
 }
-b{
+
+b {
   font-weight: 600;
+
+}
+.site__title{
+  font-family: $font3;
+  font-size: 2.3rem;
+      color: #4e5157;
+}
+.page__title{
+  font-weight: 600;
+  text-overflow: ellipsis;
+
 }
