@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% assign cat = page.collection %}
+
+{% for post in site[cat] %}
+  {% if post.url == page.url %}
+    {% assign post_index0 = forloop.index0 %}
+    {% assign post_index1 = forloop.index %}
+  {% endif %}
+{% endfor %}
+
+{% for post in site[cat] %}
+  {% if post_index0 == forloop.index %}
+    {% assign next_post = post %}
+  {% endif %}
+  {% if post_index1 == forloop.index0 %}
+    {% assign prev_post = post %}
+  {% endif %}
+{% endfor %}
+
+<div class="galery--wrap">
+  {% if prev_post %}
+  <a class="post__img--prev" href="{{ prev_post.url | prepend: site.baseurl | prepend: site.url }}">&#x2039;</a>
+  {% else %}
+  <span class="post__img__span--prev">&#x2039;</span>
+  {% endif %}
+
+  {% if next_post %}
+  <a class="post__img--next" href="{{ next_post.url | prepend: site.baseurl | prepend: site.url }}">&#x203A;</a>
+  {% else %}
+  <span class="post__img__span--next">&#x203A;</span>
+  {% endif %}
+
+{% for post in site[cat] limit: 1 %}
+<img src="{{post.image}}" alt="{{post.description}}">
+{% endfor%}
+</div>

@@ -1,0 +1,43 @@
+.article{
+  margin: 1.2rem 0 0;
+
+  &:first-child{
+    margin: 0;
+  }
+}
+#post__title{
+  padding: 0 ;
+  margin: 0.3rem 0;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-family: $font9;
+  font-size: 1.5rem;
+  a{
+    color: #1e1e1e;
+    text-decoration: none;
+
+    &:hover{
+      @extend %LinkMenu;
+    }
+  }
+}
+.date{
+  padding-bottom: .2rem;
+  border-bottom: 2px dotted #c9c9c9;
+  display: block;
+  font-family: $font9;
+  color: #575757;
+}
+.post__description{
+  font-family: $font9;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #575757;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}

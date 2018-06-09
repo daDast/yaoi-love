@@ -4,23 +4,16 @@
   <a class="buttom_br" href={{ "/" | prepend: site.baseurl | prepend: site.url }}>Главная</a>
   </li>
 
+{% for breadcrumb in page.breadcrumb %}
+<li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
+  <a class="buttom_br"  itemprop="item" href="{{ breadcrumb.dir | prepend: site.baseurl | prepend: site.url }}">
+    {{breadcrumb.name}}
+  </a>
+</li>
 
-    <li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
-      <a class="buttom_br"  itemprop="item" href="{{ptagName | downcase }}">
-        title2
-      </a>
-    </li>
+{% endfor %}
 
-
-    <li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
-      <a class="buttom_br"  itemprop="item" href="{{pagUrl}}">
-  title
-       </a>
-    </li>
-
-
-          <li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
-              <span class="bread__span" title="{{page.title}}">{{page.title}}</span>
-          </li>
-
-      </ul>
+<li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
+    <span class="bread__span" title="{{page.title}}">{{page.title}}</span>
+</li>
+</ul>

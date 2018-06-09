@@ -1,19 +1,86 @@
-{% if page.url == "/" %}
-<div class="pagination">
+{% if page.url == "/" or page.url contains "/page" %}
+<div class="pagination--home">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    <a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}" class="previous">&#171; Предыдущая страница</a>
   {% else %}
-    <span class="previous">Previous</span>
+    <span class="previous--span">&#171; Предыдущая страница</span>
   {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <span class="page_number">{{ paginator.page }} из {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}" class="next">Следующая страница &#187;</a>
   {% else %}
-    <span class="next ">Next</span>
+    <span class="next--span">Следующая страница &#187;</span>
   {% endif %}
 </div>
+{% elsif page.collection %}
+
+<div class="pagination--category">
+  {% assign cat = page.collection %}
+
+  {% for post in site[cat] %}
+    {% if post.url == page.url %}
+      {% assign post_index0 = forloop.index0 %}
+      {% assign post_index1 = forloop.index %}
+    {% endif %}
+  {% endfor %}
+
+  {% for post in site[cat] %}
+    {% if post_index0 == forloop.index %}
+      {% assign next_post = post %}
+    {% endif %}
+    {% if post_index1 == forloop.index0 %}
+      {% assign prev_post = post %}
+    {% endif %}
+  {% endfor %}
+
+
+{% if prev_post %}
+<a class="paginatePost__prev" rel="prev"
+href="{{ prev_post.url | prepend: site.baseurl | prepend: site.url }}">&#171; Предыдущая запись</a>
 {% else %}
-<div class="pagination">
-s
+<span class="span__prev">&#171; Предыдущая запись</span>
+{% endif %}
+{% if next_post %}
+<a class="paginatePost__next" rel="next"
+href="{{ next_post.url | prepend: site.baseurl | prepend: site.url }}">Следующая запись &#187;</a>
+{% else %}
+<span class="span__next">Следующая запись &#187;</span>
+{% endif %}
+</div>
+
+
+{%else%}
+<div class="pagination--category">
+  {% assign cat = page.category %}
+
+  {% for post in site.categories[cat] %}
+    {% if post.url == page.url %}
+      {% assign post_index0 = forloop.index0 %}
+      {% assign post_index1 = forloop.index %}
+    {% endif %}
+  {% endfor %}
+
+  {% for post in site.categories[cat] %}
+    {% if post_index0 == forloop.index %}
+      {% assign next_post = post %}
+    {% endif %}
+    {% if post_index1 == forloop.index0 %}
+      {% assign prev_post = post %}
+    {% endif %}
+  {% endfor %}
+
+
+{% if prev_post %}
+<a class="paginatePost__prev" rel="prev"
+href="{{ prev_post.url | prepend: site.baseurl | prepend: site.url }}">&#171; Предыдущая запись</a>
+{% else %}
+<span class="span__prev">&#171; Предыдущая запись</span>
+{% endif %}
+{% if next_post %}
+<a class="paginatePost__next" rel="next"
+href="{{ next_post.url | prepend: site.baseurl | prepend: site.url }}">Следующая запись &#187;</a>
+{% else %}
+<span class="span__next">Следующая запись &#187;</span>
+{% endif %}
 </div>
 {% endif %}
