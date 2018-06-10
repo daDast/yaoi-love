@@ -48,9 +48,6 @@ and (orientation : portrait) {
     margin: 0;
   }
   }
-  #post__title {
-    font-size: 1.4rem;
-  }
 
 
 @media only screen and (max-width:768px) {
@@ -80,6 +77,10 @@ and (orientation : portrait) {
   }
   .post__title{
     font-size: 1.3rem;
+  }
+  #post__title{
+    font-size: 1.3rem;
+
   }
   .pagination--home{
     padding: 1rem 0;
