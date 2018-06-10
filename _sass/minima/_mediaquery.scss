@@ -60,13 +60,23 @@ and (orientation : portrait) {
   body{
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 13% auto 1fr 5% auto auto;
+    grid-template-rows: 13% auto 1fr 5% 10% auto;
     grid-template-areas: "header "
                          "menu1 "
                          "content"
                          "menu2"
                          "pagn"
                          "footer";
+  }
+  .breadcrumb{
+    height: 1.5rem;
+
+    li{
+      line-height: 1.5rem;
+
+      font-size: .9rem;
+      
+    }
   }
   .pagination--home{
     padding: 1rem 0;
@@ -75,6 +85,13 @@ and (orientation : portrait) {
     position: none;
 
   }
+  .page__title {
+    font-weight: 500;
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    color: #1e1e1e;
+}
   }
 
 
