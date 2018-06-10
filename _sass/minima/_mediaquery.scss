@@ -58,7 +58,7 @@ and (orientation : portrait) {
     height: calc(100vh - 1rem);
     margin: 1rem auto 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 13% auto 1fr 5% 10% auto;
+    grid-template-rows: 13% auto 1fr auto auto auto;
     grid-template-areas: "header "
                          "menu1 "
                          "content"
@@ -80,20 +80,18 @@ and (orientation : portrait) {
     font-size: 1.3rem;
   }
   #post__title{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .article {
-    margin: .9rem 0 0;
+    margin: 1.1rem 0 0;
 }
   .date {
-    padding-bottom: .3rem;
+    padding-bottom: .4rem;
     margin-bottom: .5rem;
   }
-  .pagination--home{
-    padding: 1rem 0;
-  }
+
   .menu2 div {
-    position: none;
+    position: static;
 
   }
   .page__title {
