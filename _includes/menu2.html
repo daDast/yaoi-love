@@ -1,6 +1,8 @@
 <h4> <span>Лучшие записи</span></h4>
 <ul class="menu2__ul">
 {% for best in site.categories.best limit: 7 %}
+{% if page.url != best.url %}
 <li class="menu2__li"><a href="{{best.url | prepend: site.baseurl | prepend: site.url }}">{{best.title}}</a></li>
+{% endif %}
 {% endfor %}
 </ul>

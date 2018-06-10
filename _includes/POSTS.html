@@ -1,6 +1,6 @@
 {% for post in paginator.posts %}
 <article class="article">
-  <h1 id="post__title">
+  <h2 class="post__title">
     <a href="{{ post.url  | prepend: site.baseurl | prepend: site.url}}">{{ post.title }}</a>
   </h2>
   <span class="date">{% include date.html date=post.date %}</span>

@@ -5,7 +5,7 @@
     margin: 0;
   }
 }
-#post__title{
+.post__title{
   padding: 0 ;
   margin: 0.3rem 0;
   font-weight: 400;
@@ -23,6 +23,7 @@
 }
 .date{
   padding-bottom: .2rem;
+  margin-bottom: 1rem;
   border-bottom: 2px dotted #c9c9c9;
   display: block;
   font-family: $font9;

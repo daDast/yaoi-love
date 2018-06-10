@@ -3,8 +3,8 @@
   {% if page.url != galery.url %}
   <li class="menu1__li">
     <a href="{{galery.url | prepend: site.baseurl | prepend: site.url }}">
-      <img src="http://placehold.it/1280X721/455a64/fff" alt="{{galery.description}}">
-      {{galery.title}}
+      <img src="{{galery.image}}" alt="{{galery.description}}">
+      {{galery.title}} {{forloop.index}}
     </a>
   </li>
   {% endif %}

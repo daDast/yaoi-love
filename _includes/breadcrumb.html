@@ -1,19 +1,25 @@
-<ul class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
 
-  <li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
-  <a class="buttom_br" href={{ "/" | prepend: site.baseurl | prepend: site.url }}>Главная</a>
-  </li>
-
-{% for breadcrumb in page.breadcrumb %}
-<li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
-  <a class="buttom_br"  itemprop="item" href="{{ breadcrumb.dir | prepend: site.baseurl | prepend: site.url }}">
-    {{breadcrumb.name}}
+  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+  <a itemprop="item" class="buttom_br" href={{ "/" | prepend: site.baseurl | prepend: site.url }}>
+    <span itemprop="name">Главная</span>
   </a>
+  <meta itemprop="position" content="1" />
+  </li>
+{% assign counter = 1 %}
+{% for breadcrumb in page.breadcrumb %}
+{% assign counter = counter | plus: 1 %}
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+  <a class="buttom_br"  itemprop="item" href="{{ breadcrumb.dir | prepend: site.baseurl | prepend: site.url }}">
+  <span itemprop="name">{{breadcrumb.name}}</span>
+  </a>
+  <meta itemprop="position" content="{{counter}}"/>
 </li>
 
 {% endfor %}
 
 <li itemprop="breadcrumb-item" itemscope itemtype="http://schema.org/ListItem">
-    <span class="bread__span" title="{{page.title}}">{{page.title}}</span>
+    <span itemprop="name" class="bread__span" title="{{page.title}}">{{page.title}}</span>
+    <meta itemprop="position" content="{{counter | plus: 1}}"/>
 </li>
 </ul>

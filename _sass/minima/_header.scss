@@ -1,0 +1,41 @@
+.site__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socLinks{
+  display: flex;
+  align-items: center;
+
+  a:first-child{
+    margin-right: .5rem;
+  }
+  svg{
+    width: 2rem;
+
+  }
+}
+#telegram{
+
+  &:hover #pt1{
+    fill: #0091c8;
+  }
+  &:hover circle{
+    fill: #41b4e6;
+  }
+
+}
+#vkontakte{
+
+  &:hover{
+    circle{
+      fill: #4d76a1;
+    }
+
+  }
+  path{
+
+    // fill: red;
+  }
+
+}
