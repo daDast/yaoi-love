@@ -6,9 +6,18 @@ url: "https://dadast.github.io"
 lang: ru
 
 encoding: utf-8
-highlighter: rouge
+# highlighter: rouge
 
 
 paginate: 7
 
 permalink: /:categories/:title.html
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+collections:
+  collect:
+    output: true
+    permalink: /collect/:path/
