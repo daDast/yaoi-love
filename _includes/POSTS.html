@@ -5,7 +5,7 @@
   </h2>
   <span class="date">{% include date.html date=post.date %}</span>
   {% if post.description %}
-  <p class="post__description">{{post.description}}</p>
+  <p class="post__description">{{post.description | truncate: 160}}</p>
   {% endif %}
 </article>
 

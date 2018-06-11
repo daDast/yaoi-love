@@ -19,36 +19,51 @@ html {
   font-size: 16px;
 }
 
-.p {
+p {
   font-family: $font9;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
   color: #575757;
-  margin-bottom: 15px;
-}
-
-.h1 {
-  line-height: 2rem;
-  font-size: 1.4rem;
-  margin: 0.3rem 0;
-  font-weight: 400;
-  font-family: $font9;
-  color: #1e1e1e;
+  margin: .3rem 0;
 }
 
 .h2 {
+  font-weight: 400;
   font-family: $font9;
-  font-size: 2.4rem;
-  line-height: 2.9rem;
-  font-weight: 700;
+  font-size: 1.3rem;
   color: #1e1e1e;
-  text-align: left!important;
-  margin: 30px 0 20px;
+  margin: 0 0 .5rem;
 }
+.h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+  font-family: $font9;
+  color: #1e1e1e;
+}
+
 b {
   font-weight: 600;
+}
+.ancor{
+  text-align: right;
+  padding: 0;
+  margin: 0 0 .3rem;
+  list-style: none;
 
+  li{
+    margin: .2rem 0;
+  }
+
+  a{
+    color: #4e5157;
+    text-decoration: none;
+
+    &:hover{
+      color: #01447e;
+    }
+  }
 }
 .site__title{
   font-family: $font3;
