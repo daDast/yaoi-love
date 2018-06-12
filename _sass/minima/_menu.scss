@@ -49,6 +49,7 @@
     }
   }
 }
+//MENU   1111111111111
 .menu1__title{
     text-align: center;
     font-family: $font9;
@@ -79,11 +80,22 @@
   text-align: center;
   margin: 1rem 0;
 
+
   a{
     font-family: $font1;
-    line-height: 1.4rem;
     color: #a1a1a1;
     text-decoration: none;
+
+
+    span{
+      display: block;
+      height: 1.4rem;
+      overflow-y: hidden;
+
+      i{
+        line-height: 1.4rem;
+      }
+    }
 
     &:hover{
       @extend %LinkMenu;

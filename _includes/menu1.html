@@ -2,9 +2,9 @@
   {% for galery in site.collect limit: 4 %}
   {% if page.url != galery.url %}
   <li class="menu1__li">
-    <a href="{{galery.url | prepend: site.baseurl | prepend: site.url }}">
-      <img src="{{galery.image}}" alt="{{galery.description}}">
-      {{galery.title}} {{forloop.index}}
+    <a class="menu1__link" href="{{galery.url | prepend: site.baseurl | prepend: site.url }}">
+      <img src="{{galery.image | prepend: site.baseurl | prepend: site.url}}" alt="{{galery.description}}">
+      <span><i>{{galery.title}}</i></span>
     </a>
   </li>
   {% endif %}

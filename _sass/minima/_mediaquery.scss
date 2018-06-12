@@ -101,6 +101,7 @@ and (orientation : portrait) {
     font-family: "Open Sans", sans-serif;
     color: #1e1e1e;
 }
+
   }
 
 
@@ -114,6 +115,9 @@ and (orientation : portrait) {
 @media only screen and (max-width:480px) {
   html {
     font-size: 15px;
+  }
+  .pagination--home{
+    font-size: .9rem;
   }
   }
 

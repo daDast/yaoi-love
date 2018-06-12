@@ -37,7 +37,7 @@ layout: home
   {% endif %}
 
 
-<img src="{{page.image}}" alt="{{page.description}}">
+<img src="{{page.image | prepend: site.baseurl | prepend: site.url }}" alt="{{page.description}}">
 
 </div>
 {{content}}
