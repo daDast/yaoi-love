@@ -2,8 +2,8 @@ title: Яой со всего интернета
 name: Яой
 email: your-email@example.com
 description: Основы и нюансы самостоятельной разработки сайтов.
-baseurl: "/yaoi-love"
-url: "https://dadast.github.io"
+baseurl: ""
+url: "https://yaoi-love.ru"
 lang: ru
 
 encoding: utf-8

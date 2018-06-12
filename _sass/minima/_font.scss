@@ -83,6 +83,15 @@ blockquote{
     }
   }
 }
+ .link{
+   font-size: 1.1rem;
+   color: #00747F;
+   text-decoration: none!important;
+
+   &:hover{
+     color: #062D96;
+   }
+ }
 .site__title{
   font-family: $font3;
   font-size: 2.3rem;
