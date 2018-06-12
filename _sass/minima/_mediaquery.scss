@@ -114,13 +114,15 @@ and (orientation : portrait) {
 
 @media only screen and (max-width:480px) {
   html {
-    font-size: 15px;
+    font-size: 13px;
   }
-
   }
 
 @media only screen and (max-width:320px) {
   html {
     font-size: 10.5px;
+  }
+  .pagination--home{
+    font-size: .9rem;
   }
 }
