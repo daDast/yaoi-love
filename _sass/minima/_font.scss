@@ -16,7 +16,7 @@ $font13: "Courier New", Courier, monospace;
 $font14: "Lucida Console", Monaco, monospace;
 
 html {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 p {
@@ -31,20 +31,35 @@ p {
 .h2 {
   font-weight: 400;
   font-family: $font9;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #1e1e1e;
   margin: 0 0 .5rem;
 }
 .h3 {
   font-weight: 400;
-  font-size: 1.2rem;
-  margin: 0.3rem 0;
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
   font-family: $font9;
   color: #1e1e1e;
 }
 
 b {
   font-weight: 600;
+}
+.b{
+  font-weight: 600;
+}
+blockquote{
+  text-align: right;
+  margin-left: 0;
+  p{
+    font-size: 1.1rem;
+  }
+    span{
+      font-weight: bold;
+      color: #403D3E;
+
+  }
 }
 .ancor{
   text-align: right;
@@ -57,11 +72,12 @@ b {
   }
 
   a{
-    color: #4e5157;
+    font-size: 1.1rem;
+    color: #00747F;
     text-decoration: none!important;
 
     &:hover{
-      color: #01447e;
+      color: #062D96;
     }
   }
 }
@@ -80,7 +96,7 @@ b {
 }
 $LineHei: 1.5rem;
 #post__title{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: $LineHei;
   padding: 0 ;
   margin: 0.3rem 0;
