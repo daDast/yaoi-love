@@ -3,7 +3,7 @@ name: Яой
 email: your-email@example.com
 description: Основы и нюансы самостоятельной разработки сайтов.
 baseurl: ""
-url: "https://yaoi-love.ru"
+url: "http://yaoi-love.ru"
 lang: ru
 
 encoding: utf-8
